@@ -6,7 +6,7 @@ import Notification from "./components/section/notificationMassege/notification"
 
 import css from "./App.module.css";
 
-const DEFAULT_BUTTONS_NAME = { good: "Good", neutral: "Neutral", bad: "bad" };
+const DEFAULT_BUTTONS_NAME = { good: "Good", neutral: "Neutral", bad: "Bad" };
 
 export const App = () => {
   const [feedback, setValueFeedback] = useState({
@@ -36,9 +36,7 @@ export const App = () => {
   };
 
   const countPositiveFeedbackPercentage = (data) => {
-    return data === 0
-      ? 0 + "%"
-      : Math.round((100 * good) / feedbackTotal) + "%";
+    return data === 0 ? 0 : Math.round((100 * good) / feedbackTotal);
   };
 
   return (
@@ -82,6 +80,7 @@ export const App = () => {
               <Statistics
                 children="Positive feedback"
                 feedBacksData={countPositiveFeedbackPercentage(feedbackTotal)}
+                percentageRatio={true}
               />
             </>
           ) : (
