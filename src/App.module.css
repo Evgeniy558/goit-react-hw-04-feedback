@@ -1,0 +1,7 @@
+.main_section {
+  text-align: center;
+  margin-top: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}

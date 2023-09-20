@@ -1,0 +1,27 @@
+.section {
+  background-color: rgb(218, 231, 231);
+  border-radius: 10px;
+  -webkit-box-shadow: 8px 8px 24px 0px rgba(66, 68, 90, 1);
+  -moz-box-shadow: 8px 8px 24px 0px rgba(66, 68, 90, 1);
+  box-shadow: 8px 8px 24px 0px rgba(66, 68, 90, 1);
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-content: flex-start;
+  margin: auto;
+}
+.title {
+  margin: auto;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  font-family: roboto;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.children {
+  display: flex;
+  gap: 10px;
+  margin: auto;
+  padding-bottom: 25px;
+}
