@@ -9,10 +9,15 @@ import css from "./App.module.css";
 const DEFAULT_BUTTONS_NAME = { good: "Good", neutral: "Neutral", bad: "bad" };
 
 export const App = () => {
-  const [good, setGood] = useState(0);
-  const [neutral, setNeutral] = useState(0);
-  const [bad, setBood] = useState(0);
+  const [feedback, setValueFeedback] = useState({
+    good: 0,
+    neutral: 0,
+    bad: 0,
+  });
+
   const [feedbackTotal, setFeedbackTotal] = useState(0);
+
+  const { good, neutral, bad } = feedback;
 
   const onLeaveFeedback = (event) => {
     countTotalFeedback();
@@ -23,16 +28,11 @@ export const App = () => {
     setFeedbackTotal(feedbackTotal + 1);
   };
 
-  const increamet = (data) => {
-    if (data === "good") {
-      setGood(good + 1);
-    }
-    if (data === "neutral") {
-      setNeutral(neutral + 1);
-    }
-    if (data === "bad") {
-      setBood(bad + 1);
-    }
+  const increamet = (feedbackType) => {
+    setValueFeedback((prevFeedback) => ({
+      ...prevFeedback,
+      [feedbackType]: prevFeedback[feedbackType] + 1,
+    }));
   };
 
   const countPositiveFeedbackPercentage = (data) => {
