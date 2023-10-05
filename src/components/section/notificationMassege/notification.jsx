@@ -1,13 +1,10 @@
 import css from "./notification.module.css";
-import PropTypes from "prop-types";
-const Notification = ({ message }) => {
+
+const Notification = ({ children }) => {
   return (
     <div className={css.notification}>
-      <>{message}</>
+      <>{children}</>
     </div>
   );
 };
 export default Notification;
-Notification.propTypes = {
-  message: PropTypes.string.isRequired,
-};

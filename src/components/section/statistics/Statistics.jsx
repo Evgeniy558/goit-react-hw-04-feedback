@@ -1,10 +1,10 @@
 import css from "./Statistics.module.css";
 import PropTypes from "prop-types";
-const Statistics = ({ children, feedBacksData, percentageRatio }) => {
+const Statistics = ({ children, feedBacksData }) => {
   return (
     <>
       <div className={css.statistic}>
-        {children}: {percentageRatio ? `${feedBacksData}%` : feedBacksData}
+        {children}: {feedBacksData}
       </div>
     </>
   );
@@ -12,6 +12,4 @@ const Statistics = ({ children, feedBacksData, percentageRatio }) => {
 export default Statistics;
 Statistics.propTypes = {
   feedBacksData: PropTypes.number.isRequired,
-  percentageRatio: PropTypes.bool,
-  children: PropTypes.string.isRequired,
 };

@@ -11,5 +11,4 @@ export default FeedbackOptions;
 FeedbackOptions.propTypes = {
   onClick: PropTypes.func.isRequired,
   id: PropTypes.string.isRequired,
-  children: PropTypes.any.isRequired,
 };
