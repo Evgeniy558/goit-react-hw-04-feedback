@@ -57,7 +57,7 @@ export const App = () => {
           id="bad"
           children={DEFAULT_BUTTONS_NAME.bad}
         >
-          Bad{" "}
+          Bad
         </FeedbackOptions>
       </Section>
 
@@ -70,7 +70,6 @@ export const App = () => {
             gap: "10px",
           }}
         >
-          {" "}
           {feedbackTotal > 0 ? (
             <>
               <Statistics children="Good" feedBacksData={good} />
